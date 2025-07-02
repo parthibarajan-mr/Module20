@@ -17,7 +17,7 @@ Interpretability
 While Random Forests are powerful, they are harder to interpret directly compared to Decision Trees or Logistic Regression.
 
 Ways to Interpret:
-Feature Importance (already done partially):
+Feature Importance (already done):
 
 We mentioned Age and status_year as key predictors.
 
