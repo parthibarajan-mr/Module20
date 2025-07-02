@@ -60,8 +60,9 @@ Use SMOTE or stratified sampling to address class imbalance.
 Perform cross-company generalization
 
 Build an interactive dashboard with Streamlit or Dash to monitor attrition risk predictions live.
-====================================================================================================
+
 Detailed Summary:
+=================
 The objective of this project is to create and evaluate prediction models for employee attrition in order to pinpoint workers who could be at danger of quitting the organization. We will train and optimize five distinct categorization modelsᅳNeural Network, K-Nearest Neighbors (KNN), Decision Tree, Random Forest, and Logistic Regressionᅳin order to precisely forecast employee turnover. Based on current employee data, these models will help determine which employees are most likely to depart. 
 
 To determine which of these models is the most effective, we will assess and contrast their respective performances. After the top model has been determined, we will investigate it further to identify the essential components that greatly enhance its functionality.We will look at specific predictions to see how the algorithm makes decisions for certain employees.This will help us gain a greater understanding of the prediction process and the factors influencing each decision. 
@@ -90,5 +91,5 @@ Logistic Regression
 
 
 Note: Will add more in depth details in the Readme file at the last module
-
+==========================================================================
 
