@@ -1,4 +1,4 @@
-Short Summary:-
+#### Short Summary
 Wisdom of the Crowd (Ensembling) vs. Individual Models
 We explored both individual models and ensemble methods:
 
@@ -14,7 +14,7 @@ Accuracy ≈ 99.16%
 ROC-AUC ≈ 0.957
 Yes, the ensemble model (Random Forest) performed better overall, which supports the idea of “wisdom of the crowd”: combining multiple decision trees reduced overfitting and improved generalization.
 
-Interpretability
+#### Interpretability
 While Random Forests are powerful, they are harder to interpret directly compared to Decision Trees or Logistic Regression.
 
 Ways to Interpret:
@@ -40,8 +40,7 @@ Visualize how a feature impacts predictions.
 from sklearn.inspection import plot_partial_dependence
 plot_partial_dependence(best_rf.named_steps['classifier'], X, features=['age', 'length_of_service'])
 
-What Features Mattered in Predicting Attrition?
-From the classification report and general intuition:
+#### What Features Mattered in Predicting Attrition?
 
 Age: Often linked with career transitions, promotions, or retirement
 
@@ -74,7 +73,10 @@ This question is important for providing employers with key insights into reason
 Can we predict which employees are likely to leave a company?
 
 #### Data Sources
-The data source for this is a Kaggle Dataset called [Employee Attrition](https://www.kaggle.com/datasets/HRAnalyticRepository/employee-attrition-data/data) which provides information regarding length of service, termination date, status (target variable), business unit, job title, department, city, and other information. It has about 49700 data points and is fairly clean data with no missing or unknown values.
+The data source for this is a Kaggle Dataset called [Employee Attrition](https://www.kaggle.com/datasets/HRAnalyticRepository/employee-attrition-data/data) which provides information regarding length of service, termination date, status (target variable), business unit, job title, department, city, and other information. 
+
+#### Cleaning and Preparation
+It has about 49700 data points and is fairly clean data with no missing or unknown values.Feature engineering to consolidate columns and update cities to represent populations.Dropped any duplicate values and dropped any unneeded columns
 
 #### Methodology
 For this analysis and to answer the research question, I utilized four models to evaluate and analyze which would provide the best accuracy and results. The four models include: 
@@ -166,7 +168,8 @@ macro avg       0.99      0.50      0.50      9931
 weighted avg    0.97      0.97      0.96      9931
 ROC-AUC score for Logistic Regression: 0.7355
 
-Training Decision Tree with GridSearchCV... Time taken: 1.9123926162719727 Decision Tree best parameters: {'classifier__criterion': 'entropy', 'classifier__max_depth': 10, 'classifier__min_samples_split': 10} Decision Tree best cross-validation accuracy: 0.9912 Decision Tree test accuracy: 0.9918
+#### Training Decision Tree with GridSearchCV
+Time taken: 1.9123926162719727 Decision Tree best parameters: {'classifier__criterion': 'entropy', 'classifier__max_depth': 10, 'classifier__min_samples_split': 10} Decision Tree best cross-validation accuracy: 0.9912 Decision Tree test accuracy: 0.9918
 
 Classification Report for Decision Tree:
 
@@ -180,7 +183,8 @@ Classification Report for Decision Tree:
    weighted avg       0.99      0.99      0.99      9931
 0 ROC-AUC score for Decision Tree: 0.9561
 
-Training Random Forest with GridSearchCV... Time taken: 375.5492389202118 Random Forest best parameters: {'classifier__max_depth': 10, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 300} Random Forest best cross-validation accuracy: 0.9909 Random Forest test accuracy: 0.9916
+#### Training Random Forest with GridSearchCV
+Time taken: 375.5492389202118 Random Forest best parameters: {'classifier__max_depth': 10, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 300} Random Forest best cross-validation accuracy: 0.9909 Random Forest test accuracy: 0.9916
 
 Classification Report for Random Forest:
 
@@ -194,7 +198,8 @@ Classification Report for Random Forest:
  weighted avg       0.99      0.99      0.99      9931
 0 ROC-AUC score for Random Forest: 0.9570
 
-Training K-Nearest Neighbors with GridSearchCV... Time taken: 6.940548658370972 K-Nearest Neighbors best parameters: {'classifier__metric': 'manhattan', 'classifier__n_neighbors': 9, 'classifier__weights': 'distance'} K-Nearest Neighbors best cross-validation accuracy: 0.9814 K-Nearest Neighbors test accuracy: 0.9834
+#### Training K-Nearest Neighbors with GridSearchCV
+Time taken: 6.940548658370972 K-Nearest Neighbors best parameters: {'classifier__metric': 'manhattan', 'classifier__n_neighbors': 9, 'classifier__weights': 'distance'} K-Nearest Neighbors best cross-validation accuracy: 0.9814 K-Nearest Neighbors test accuracy: 0.9834
 
 Classification Report for K-Nearest Neighbors:
 
@@ -208,13 +213,14 @@ Classification Report for K-Nearest Neighbors:
  weighted avg        0.98      0.98      0.98      9931
 0 ROC-AUC score for K-Nearest Neighbors: 0.8908
 
+#### Findings
 The findings from the GridSearchCV are more interesting, as we see similar results that the Random Forest and Decision Tree both have much higher accuracy and cross-validation accuracy than the other two models. However, in this case the Decision Tree had a slightly higher accuracy than the Random Forest model did. This potentially could be due to the tuning of the parameters having a slightly better impact on the Decision Tree model. In addition we see that the ROC-AUC scores for KNN, Random Forest, and Decision Tree have all above 0.95 which means that the results for these models are accurate since values closer to 0.5 mean that the model is randomly predicting and closer to 1 means that it is making meaningful predictions.
 
-Next steps
-Conclusion
+#### Next Steps
+#### Conclusion
 Overall, this study provided key insights into potential opportunities for employers to assess what may be significant factors that play a role in identifying employees at risk for attrition. Employers could take advantage of this model and continue to feed in data to identify additional features that may allow them to further identify these risks. For instance, we notice that Age and status_year are very impactful. Throughout the research and exploratory process, we noticed that typically all the models (decision tree, logistic regression, random forest, k-nearest-neighbor) all relatively high model accuracy, f1-scores, and ROC-AUC scores depicting the models providing good results.
 
-Future Work
+#### Future Work
 We notice that the Age plays a large role in attrition for a majority of employees. Further work in this area could result in determining factors that may lead to age whether that be due to employees growing older and wanting to retire versus potentially younger employees leaving for a variety of other reasons. To further this research, I believe pulling data from other companies and sources could provide more insights for employers that across different companies what attrition looks like and assess general patterns that may come up.
 
 This work includes looking into additional datasets (such as IBM Attrition dataset or private data from multiple companies) and individually running models on them and trying to combine datasets and running the models against a combine dataset. This I believe would provide varying results that can definitely help the models generalize more accurately. Additionally, I believe that further tuning of hyperparameters can also help improve the models and further this research. This can include updating the criterion options for the decision tree model or incorporating other models such as Neural Networks, XgbBooster.
