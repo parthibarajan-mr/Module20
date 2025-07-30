@@ -228,3 +228,8 @@ We notice that the Age plays a large role in attrition for a majority of employe
 
 This work includes looking into additional datasets (such as IBM Attrition dataset or private data from multiple companies) and individually running models on them and trying to combine datasets and running the models against a combine dataset. This I believe would provide varying results that can definitely help the models generalize more accurately. Additionally, I believe that further tuning of hyperparameters can also help improve the models and further this research. This can include updating the criterion options for the decision tree model or incorporating other models such as Neural Networks, XgbBooster.
 
+### Contact and Further Information
+
+Parthibarajan Malrajankuppam Ranganathan
+
+Email: parthi_mr@yahoo.com
