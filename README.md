@@ -58,6 +58,8 @@ Use SMOTE or stratified sampling to address class imbalance.
 Perform cross-company generalization
 Build an interactive dashboard with Streamlit or Dash to monitor attrition risk predictions live.
 
+##### Final Jupyter Notebook Link: [Capstone_Project_Updated.ipynb](https://github.com/parthibarajan-mr/Module20/blob/main/Capstone_Project_Updated.ipynb)
+
 Detailed Summary:
 =================
 The objective of this project is to create and evaluate prediction models for employee attrition in order to pinpoint workers who could be at danger of quitting the organization. We will train and optimize five distinct categorization modelsᅳNeural Network, K-Nearest Neighbors (KNN), Decision Tree, Random Forest, and Logistic Regressionᅳin order to precisely forecast employee turnover. Based on current employee data, these models will help determine which employees are most likely to depart. 
