@@ -230,6 +230,8 @@ This work includes looking into additional datasets (such as IBM Attrition datas
 
 ### Contact and Further Information
 
-Parthibarajan Malrajankuppam Ranganathan
+Name: Parthibarajan Malrajankuppam Ranganathan
 
 Email: parthi_mr@yahoo.com
+
+UC Berkeley - Professional Certificate in Machine Learning/Artificial Intelligence
