@@ -154,7 +154,8 @@ From this evaluation, Random Forest and Decision Tree proved to have the highest
 
 The results of the GridSearchCV are as follows:
 
-Training Logistic Regression with GridSearchCV... Time taken: 7.2204625606536865 Logistic Regression best parameters: {'classifier__C': 0.1, 'classifier__fit_intercept': False, 'classifier__penalty': 'l2'} Logistic Regression best cross-validation accuracy: 0.9699 Logistic Regression test accuracy: 0.9706
+#### Training Logistic Regression with GridSearchCV
+Time taken: 7.2204625606536865 Logistic Regression best parameters: {'classifier__C': 0.1, 'classifier__fit_intercept': False, 'classifier__penalty': 'l2'} Logistic Regression best cross-validation accuracy: 0.9699 Logistic Regression test accuracy: 0.9706
 
 Classification Report for Logistic Regression:
 
