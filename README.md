@@ -43,9 +43,11 @@ plot_partial_dependence(best_rf.named_steps['classifier'], X, features=['age', '
 What Features Mattered in Predicting Attrition?
 From the classification report and general intuition:
 
-Age: Often linked with career transitions, promotions, or retirement.
-Length of service: Correlates with job satisfaction and burnout.
-Job title category / City size: May reflect job security and living costs.
+Age: Often linked with career transitions, promotions, or retirement
+
+Length of service: Correlates with job satisfaction and burnout
+
+Job title category / City size: May reflect job security and living costs
 
 Check:
 pd.Series(best_rf.named_steps['classifier'].feature_importances_, index=X.columns).sort_values(ascending=False)
@@ -128,6 +130,11 @@ Results
 In my initial exploration of the dataset, I described and plotted several visualizations that helped gain key insights into the dataset.
 
 distributioncitysize lengthdistribution agedistribution
+![Length-Service](https://github.com/user-attachments/assets/f8345dda-4750-47b8-9446-e38645176f52)
+![plot3](https://github.com/user-attachments/assets/d967552d-9850-467a-b7f7-a696de5225c3)
+![plot2](https://github.com/user-attachments/assets/05c5d3b6-6e22-4601-97fa-0db8a987739e)
+![plot1](https://github.com/user-attachments/assets/5325f567-ce56-4317-9b87-2c704f6bfa41)
+![plot4](https://github.com/user-attachments/assets/e48bb525-bca2-46da-8e67-180714eb6217)
 
 From the dataset, we can see that the STATUS is much lower than that of the active employees. Furthermore, some interesting observations can be made related to the age distribution and length of service. It looks as though there the age of distribution seems to be evenly distributed with general spikes in age every 2/3 year intervals (i.e. 21, 23, 25, 27, 30, etc). Related to the length of service distribution we see that there is a steep drop off after about 17 years of service at the companies.
 
